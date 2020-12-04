@@ -1,0 +1,403 @@
+
+❯ ./configure --prefix=/opt/libdbi \                                                                   master ✱ ◼
+>   --disable-docs \
+>   --with-dbi-incdir=/opt/libdbi/include \
+>   --with-dbi-libdir=/opt/libdbi/lib \
+>   --with-sqlite3 \
+>   --with-sqlite3-incdir=/opt/sqlite/include \
+>   --with-sqlite3-libdir=/opt/sqlite/lib \
+>   --with-mysql \
+>   --with-mysql-incdir=/opt/mysql/include \
+>   --with-mysql-libdir=/opt/mysql/lib
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking how to print strings... printf
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C preprocessor... gcc -E
+checking for libdbi framework... checking for MySQL support... yes
+checking for MySQL includes... -I/opt/mysql/include
+checking for MySQL libraries... 
+checking for PostgreSQL support... no
+checking for SQLite support... no
+checking for SQLite3 support... yes
+checking for Msql support... no
+checking for Oracle support... no
+checking for Firebird/Interbase support... no
+checking for Freetds support... no
+checking for Ingres support... no
+checking for IBM DB2 support... no
+checking for strtoll... yes
+checking for atoll... yes
+checking for vasprintf... yes
+checking for asprintf... yes
+checking for libdbi library... yes: libs in /opt/libdbi/lib
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating libdbi-drivers.spec
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/include/Makefile
+config.status: creating drivers/Makefile
+config.status: creating drivers/mysql/Makefile
+config.status: creating drivers/pgsql/Makefile
+config.status: creating drivers/sqlite/Makefile
+config.status: creating drivers/sqlite3/Makefile
+config.status: creating drivers/msql/Makefile
+config.status: creating drivers/oracle/Makefile
+config.status: creating drivers/firebird/Makefile
+config.status: creating drivers/freetds/Makefile
+config.status: creating drivers/ingres/Makefile
+config.status: creating drivers/db2/Makefile
+config.status: creating tests/Makefile
+config.status: creating tests/cgreen/Makefile
+config.status: creating tests/test_dbi.cfg
+config.status: creating tests/plugin_settings.sh
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+root@debian /opt/libdbi/archive/source/libdbi-drivers-0.9.0
+❯ make                                                                                                 master ✱ ◼
+make  all-recursive
+make[1]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0'
+Making all in drivers
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers'
+Making all in mysql
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/mysql'
+/bin/bash ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../.. -I../../include -I/opt/libdbi/include -I/opt/mysql/include    -std=gnu99  -MT dbd_mysql.lo -MD -MP -MF .deps/dbd_mysql.Tpo -c -o dbd_mysql.lo dbd_mysql.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../.. -I../../include -I/opt/libdbi/include -I/opt/mysql/include -std=gnu99 -MT dbd_mysql.lo -MD -MP -MF .deps/dbd_mysql.Tpo -c dbd_mysql.c  -fPIC -DPIC -o .libs/dbd_mysql.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../.. -I../../include -I/opt/libdbi/include -I/opt/mysql/include -std=gnu99 -MT dbd_mysql.lo -MD -MP -MF .deps/dbd_mysql.Tpo -c dbd_mysql.c -o dbd_mysql.o >/dev/null 2>&1
+mv -f .deps/dbd_mysql.Tpo .deps/dbd_mysql.Plo
+/bin/bash ../../libtool --tag=CC   --mode=link gcc  -std=gnu99  -module -avoid-version  -L/opt/mysql/lib -lmysqlclient -no-undefined -ldbi -L/opt/libdbi/lib  -o libdbdmysql.la -rpath /opt/libdbi/lib/dbd dbd_mysql.lo  
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/dbd_mysql.o   -L/opt/mysql/lib -lmysqlclient /opt/libdbi/lib/libdbi.so -ldl -lm -L/opt/libdbi/lib    -Wl,-soname -Wl,libdbdmysql.so -o .libs/libdbdmysql.so
+libtool: link: ar cru .libs/libdbdmysql.a  dbd_mysql.o
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: ranlib .libs/libdbdmysql.a
+libtool: link: ( cd ".libs" && rm -f "libdbdmysql.la" && ln -s "../libdbdmysql.la" "libdbdmysql.la" )
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/mysql'
+Making all in pgsql
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/pgsql'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/pgsql'
+Making all in sqlite
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/sqlite'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/sqlite'
+Making all in sqlite3
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/sqlite3'
+/bin/bash ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../.. -I../../include -I/opt/libdbi/include -I/opt/sqlite/include -DDBDIR=\"/opt/libdbi/var/lib/libdbi/sqlite3\"   -std=gnu99  -MT dbd_sqlite3.lo -MD -MP -MF .deps/dbd_sqlite3.Tpo -c -o dbd_sqlite3.lo dbd_sqlite3.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../.. -I../../include -I/opt/libdbi/include -I/opt/sqlite/include -DDBDIR=\"/opt/libdbi/var/lib/libdbi/sqlite3\" -std=gnu99 -MT dbd_sqlite3.lo -MD -MP -MF .deps/dbd_sqlite3.Tpo -c dbd_sqlite3.c  -fPIC -DPIC -o .libs/dbd_sqlite3.o
+dbd_sqlite3.c: In function 'dbd_list_dbs':
+dbd_sqlite3.c:426:5: warning: 'readdir_r' is deprecated [-Wdeprecated-declarations]
+     retval = readdir_r(dp, entry, &result);
+     ^~~~~~
+In file included from dbd_sqlite3.c:50:
+/usr/include/dirent.h:183:12: note: declared here
+ extern int readdir_r (DIR *__restrict __dirp,
+            ^~~~~~~~~
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../.. -I../../include -I/opt/libdbi/include -I/opt/sqlite/include -DDBDIR=\"/opt/libdbi/var/lib/libdbi/sqlite3\" -std=gnu99 -MT dbd_sqlite3.lo -MD -MP -MF .deps/dbd_sqlite3.Tpo -c dbd_sqlite3.c -o dbd_sqlite3.o >/dev/null 2>&1
+mv -f .deps/dbd_sqlite3.Tpo .deps/dbd_sqlite3.Plo
+/bin/bash ../../libtool --tag=CC   --mode=link gcc  -std=gnu99  -module -avoid-version -L/opt/sqlite/lib -lsqlite -no-undefined -ldbi -L/opt/libdbi/lib  -o libdbdsqlite3.la -rpath /opt/libdbi/lib/dbd dbd_sqlite3.lo  
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/dbd_sqlite3.o   -L/opt/sqlite/lib -lsqlite /opt/libdbi/lib/libdbi.so -ldl -lm -L/opt/libdbi/lib    -Wl,-soname -Wl,libdbdsqlite3.so -o .libs/libdbdsqlite3.so
+libtool: link: ar cru .libs/libdbdsqlite3.a  dbd_sqlite3.o
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: ranlib .libs/libdbdsqlite3.a
+libtool: link: ( cd ".libs" && rm -f "libdbdsqlite3.la" && ln -s "../libdbdsqlite3.la" "libdbdsqlite3.la" )
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/sqlite3'
+Making all in msql
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/msql'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/msql'
+Making all in oracle
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/oracle'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/oracle'
+Making all in firebird
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/firebird'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/firebird'
+Making all in freetds
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/freetds'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/freetds'
+Making all in ingres
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/ingres'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/ingres'
+Making all in db2
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/db2'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/db2'
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers'
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers'
+Making all in tests
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/tests'
+Making all in cgreen
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/tests/cgreen'
+gcc -DHAVE_CONFIG_H -I. -I../.. -Iinclude    -std=gnu99  -MT unit.o -MD -MP -MF .deps/unit.Tpo -c -o unit.o `test -f 'src/unit.c' || echo './'`src/unit.c
+src/unit.c: In function ‘wait_for_child_process’:
+src/unit.c:229:5: warning: implicit declaration of function ‘wait’; did you mean ‘want’? [-Wimplicit-function-declaration]
+     wait(&status);
+     ^~~~
+     want
+mv -f .deps/unit.Tpo .deps/unit.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -Iinclude    -std=gnu99  -MT messaging.o -MD -MP -MF .deps/messaging.Tpo -c -o messaging.o `test -f 'src/messaging.c' || echo './'`src/messaging.c
+mv -f .deps/messaging.Tpo .deps/messaging.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -Iinclude    -std=gnu99  -MT breadcrumb.o -MD -MP -MF .deps/breadcrumb.Tpo -c -o breadcrumb.o `test -f 'src/breadcrumb.c' || echo './'`src/breadcrumb.c
+mv -f .deps/breadcrumb.Tpo .deps/breadcrumb.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -Iinclude    -std=gnu99  -MT reporter.o -MD -MP -MF .deps/reporter.Tpo -c -o reporter.o `test -f 'src/reporter.c' || echo './'`src/reporter.c
+mv -f .deps/reporter.Tpo .deps/reporter.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -Iinclude    -std=gnu99  -MT assertions.o -MD -MP -MF .deps/assertions.Tpo -c -o assertions.o `test -f 'src/assertions.c' || echo './'`src/assertions.c
+mv -f .deps/assertions.Tpo .deps/assertions.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -Iinclude    -std=gnu99  -MT vector.o -MD -MP -MF .deps/vector.Tpo -c -o vector.o `test -f 'src/vector.c' || echo './'`src/vector.c
+mv -f .deps/vector.Tpo .deps/vector.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -Iinclude    -std=gnu99  -MT mocks.o -MD -MP -MF .deps/mocks.Tpo -c -o mocks.o `test -f 'src/mocks.c' || echo './'`src/mocks.c
+mv -f .deps/mocks.Tpo .deps/mocks.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -Iinclude    -std=gnu99  -MT constraint.o -MD -MP -MF .deps/constraint.Tpo -c -o constraint.o `test -f 'src/constraint.c' || echo './'`src/constraint.c
+src/constraint.c: In function ‘with_’:
+src/constraint.c:104:22: warning: assignment to ‘void (*)(Constraint *, const char *, intptr_t,  const char *, int,  TestReporter *)’ {aka ‘void (*)(struct Constraint_ *, const char *, long int,  const char *, int,  struct TestReporter_ *)’} from incompatible pointer type ‘void (*)(Constraint *, const char *, const char *, intptr_t,  const char *, int,  TestReporter *)’ {aka ‘void (*)(struct Constraint_ *, const char *, const char *, long int,  const char *, int,  struct TestReporter_ *)’} [-Wincompatible-pointer-types]
+     constraint->test = &test_with_matcher;
+                      ^
+src/constraint.c: In function ‘compare_using_matcher’:
+src/constraint.c:167:32: warning: initialization of ‘int (*)(const void *)’ from ‘intptr_t’ {aka ‘long int’} makes pointer from integer without a cast [-Wint-conversion]
+  int (*matches)(const void*) = constraint->expected;
+                                ^~~~~~~~~~
+src/constraint.c:168:20: warning: passing argument 1 of ‘matches’ makes pointer from integer without a cast [-Wint-conversion]
+     return matches(actual);
+                    ^~~~~~
+src/constraint.c:168:20: note: expected ‘const void *’ but argument is of type ‘intptr_t’ {aka ‘long int’}
+mv -f .deps/constraint.Tpo .deps/constraint.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -Iinclude    -std=gnu99  -MT parameters.o -MD -MP -MF .deps/parameters.Tpo -c -o parameters.o `test -f 'src/parameters.c' || echo './'`src/parameters.c
+mv -f .deps/parameters.Tpo .deps/parameters.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -Iinclude    -std=gnu99  -MT text_reporter.o -MD -MP -MF .deps/text_reporter.Tpo -c -o text_reporter.o `test -f 'src/text_reporter.c' || echo './'`src/text_reporter.c
+mv -f .deps/text_reporter.Tpo .deps/text_reporter.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -Iinclude    -std=gnu99  -MT cdash_reporter.o -MD -MP -MF .deps/cdash_reporter.Tpo -c -o cdash_reporter.o `test -f 'src/cdash_reporter.c' || echo './'`src/cdash_reporter.c
+mv -f .deps/cdash_reporter.Tpo .deps/cdash_reporter.Po
+rm -f libcgreen.a
+ar cru libcgreen.a unit.o messaging.o breadcrumb.o reporter.o assertions.o vector.o mocks.o constraint.o parameters.o text_reporter.o cdash_reporter.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libcgreen.a
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/tests/cgreen'
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/tests'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/tests'
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/tests'
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0'
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0'
+make[1]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0'
+root@debian /opt/libdbi/archive/source/libdbi-drivers-0.9.0
+❯ make install                                                                                         master ✱ ◼
+Making install in drivers
+make[1]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers'
+Making install in mysql
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/mysql'
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/mysql'
+ /usr/bin/mkdir -p '/opt/libdbi/lib/dbd'
+ /bin/bash ../../libtool   --mode=install /usr/bin/install -c   libdbdmysql.la '/opt/libdbi/lib/dbd'
+libtool: install: /usr/bin/install -c .libs/libdbdmysql.so /opt/libdbi/lib/dbd/libdbdmysql.so
+libtool: install: /usr/bin/install -c .libs/libdbdmysql.lai /opt/libdbi/lib/dbd/libdbdmysql.la
+libtool: install: /usr/bin/install -c .libs/libdbdmysql.a /opt/libdbi/lib/dbd/libdbdmysql.a
+libtool: install: chmod 644 /opt/libdbi/lib/dbd/libdbdmysql.a
+libtool: install: ranlib /opt/libdbi/lib/dbd/libdbdmysql.a
+libtool: finish: PATH="/opt/zlib/bin:/opt/vim/bin:/opt/valgrind/bin:/opt/termcap/bin:/opt/sqlite/bin:/opt/shadowsocks/bin:/opt/ruby/bin:/opt/readline/bin:/opt/python3/bin:/opt/python2/bin:/opt/perl/bin:/opt/pcre2/bin:/opt/pcre/bin:/opt/openssl/bin:/opt/node/bin:/opt/nghttp2/bin:/opt/ncurses/bin:/opt/mysql/bin:/opt/lua/bin:/opt/lighttpd/bin:/opt/libxml2/bin:/opt/libxslt/bin:/opt/libuv/bin:/opt/libevent/bin:/opt/libev/bin:/opt/libdbi/bin:/opt/jemalloc/bin:/opt/java/bin:/opt/iconv/bin:/opt/httpd/bin:/opt/go/bin:/opt/go/my/bin:/opt/git/bin:/opt/ffi/bin:/opt/expat/bin:/opt/curl/bin:/opt/cmake/bin:/opt/bzip2/bin:/opt/boost/bin:/opt/autoconf/bin:/opt/asciidoc/bin:/opt/apr-util/bin:/opt/apr-iconv/bin:/opt/apr/bin:/root/.local/bin:/usr/games:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /opt/libdbi/lib/dbd
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /opt/libdbi/lib/dbd
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/mysql'
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/mysql'
+Making install in pgsql
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/pgsql'
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/pgsql'
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/pgsql'
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/pgsql'
+Making install in sqlite
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/sqlite'
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/sqlite'
+/bin/bash /opt/libdbi/archive/source/libdbi-drivers-0.9.0/install-sh -d /opt/libdbi/var/lib/libdbi/sqlite	
+chmod 1777 /opt/libdbi/var/lib/libdbi/sqlite
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/sqlite'
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/sqlite'
+Making install in sqlite3
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/sqlite3'
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/sqlite3'
+/bin/bash /opt/libdbi/archive/source/libdbi-drivers-0.9.0/install-sh -d /opt/libdbi/var/lib/libdbi/sqlite3
+chmod 1777 /opt/libdbi/var/lib/libdbi/sqlite3
+ /usr/bin/mkdir -p '/opt/libdbi/lib/dbd'
+ /bin/bash ../../libtool   --mode=install /usr/bin/install -c   libdbdsqlite3.la '/opt/libdbi/lib/dbd'
+libtool: install: /usr/bin/install -c .libs/libdbdsqlite3.so /opt/libdbi/lib/dbd/libdbdsqlite3.so
+libtool: install: /usr/bin/install -c .libs/libdbdsqlite3.lai /opt/libdbi/lib/dbd/libdbdsqlite3.la
+libtool: install: /usr/bin/install -c .libs/libdbdsqlite3.a /opt/libdbi/lib/dbd/libdbdsqlite3.a
+libtool: install: chmod 644 /opt/libdbi/lib/dbd/libdbdsqlite3.a
+libtool: install: ranlib /opt/libdbi/lib/dbd/libdbdsqlite3.a
+libtool: finish: PATH="/opt/zlib/bin:/opt/vim/bin:/opt/valgrind/bin:/opt/termcap/bin:/opt/sqlite/bin:/opt/shadowsocks/bin:/opt/ruby/bin:/opt/readline/bin:/opt/python3/bin:/opt/python2/bin:/opt/perl/bin:/opt/pcre2/bin:/opt/pcre/bin:/opt/openssl/bin:/opt/node/bin:/opt/nghttp2/bin:/opt/ncurses/bin:/opt/mysql/bin:/opt/lua/bin:/opt/lighttpd/bin:/opt/libxml2/bin:/opt/libxslt/bin:/opt/libuv/bin:/opt/libevent/bin:/opt/libev/bin:/opt/libdbi/bin:/opt/jemalloc/bin:/opt/java/bin:/opt/iconv/bin:/opt/httpd/bin:/opt/go/bin:/opt/go/my/bin:/opt/git/bin:/opt/ffi/bin:/opt/expat/bin:/opt/curl/bin:/opt/cmake/bin:/opt/bzip2/bin:/opt/boost/bin:/opt/autoconf/bin:/opt/asciidoc/bin:/opt/apr-util/bin:/opt/apr-iconv/bin:/opt/apr/bin:/root/.local/bin:/usr/games:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /opt/libdbi/lib/dbd
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /opt/libdbi/lib/dbd
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/sqlite3'
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/sqlite3'
+Making install in msql
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/msql'
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/msql'
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/msql'
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/msql'
+Making install in oracle
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/oracle'
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/oracle'
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/oracle'
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/oracle'
+Making install in firebird
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/firebird'
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/firebird'
+/bin/bash /opt/libdbi/archive/source/libdbi-drivers-0.9.0/install-sh -d /opt/libdbi/var/lib/libdbi/firebird
+chmod 1777 /opt/libdbi/var/lib/libdbi/firebird
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/firebird'
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/firebird'
+Making install in freetds
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/freetds'
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/freetds'
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/freetds'
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/freetds'
+Making install in ingres
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/ingres'
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/ingres'
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/ingres'
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/ingres'
+Making install in db2
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/db2'
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/db2'
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/db2'
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers/db2'
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers'
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers'
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers'
+make[1]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/drivers'
+Making install in tests
+make[1]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/tests'
+Making install in cgreen
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/tests/cgreen'
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/tests/cgreen'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/tests/cgreen'
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/tests/cgreen'
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/tests'
+make[3]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/tests'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/tests'
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/tests'
+make[1]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0/tests'
+make[1]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0'
+make[2]: Entering directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0'
+make[1]: Leaving directory '/opt/libdbi/archive/source/libdbi-drivers-0.9.0'
+

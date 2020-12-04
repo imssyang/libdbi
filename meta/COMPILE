@@ -1,0 +1,22 @@
+
+cd libdbi-0.9.0
+./configure --prefix=/opt/libdbi
+make 
+make install
+
+apt install openjade
+
+cd libdbi-drivers-0.9.0
+./configure --prefix=/opt/libdbi \
+  --disable-docs \
+  --with-dbi-incdir=/opt/libdbi/include \
+  --with-dbi-libdir=/opt/libdbi/lib \
+  --with-sqlite3 \
+  --with-sqlite3-incdir=/opt/sqlite/include \
+  --with-sqlite3-libdir=/opt/sqlite/lib \
+  --with-mysql \
+  --with-mysql-incdir=/opt/mysql/include \
+  --with-mysql-libdir=/opt/mysql/lib
+
+
+
